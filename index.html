@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Greenback House Build</title>
+
+  <!-- Local Swiper CSS -->
+  <link rel="stylesheet" href="swiper/swiper-bundle.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="swiper-container">
+    <div class="swiper-wrapper" id="swiper-wrapper"></div>
+
+    <!-- Navigation buttons -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+
+    <!-- Pagination -->
+    <div class="swiper-pagination"></div>
+  </div>
+
+  <!-- Local Swiper JS -->
+  <script src="swiper/swiper-bundle.min.js"></script>
+  <script>
+    fetch('images.json')
+      .then(res => res.json())
+      .then(paths => {
+        const wrapper = document.getElementById('swiper-wrapper');
+        paths.forEach(path => {
+          const slide = document.createElement('div');
+          slide.className = 'swiper-slide';
+          slide.innerHTML = `<img src="${path}" alt="Slide Image">`;
+          wrapper.appendChild(slide);
+        });
+
+        new Swiper('.swiper-container', {
+          loop: true,
+          autoplay: {
+            delay: 4000,
+            disableOnInteraction: false,
+          },
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+          },
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+          keyboard: {
+            enabled: true,
+            onlyInViewport: true,
+          },
+          mousewheel: {
+            invert: false,
+          }
+        });
+      })
+      .catch(err => {
+        document.body.innerHTML = '<p style="color: white; text-align: center;">Could not load images.</p>';
+        console.error(err);
+      });
+  </script>
+
+</body>
+</html>

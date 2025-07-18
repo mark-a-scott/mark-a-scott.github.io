@@ -1,15 +1,54 @@
 [
-    "images/01-empty_lot.jpg",
-    "images/05-view_of_cows.jpg",
-    "images/10-muddy_location.jpg",
-    "images/15-footers.jpg",
-    "images/20-we_have_blocks.jpg",
-    "images/25-work_begins.jpg",
-    "images/30-more_blocks.jpg",
-    "images/35-foundation_begins.jpg",
-    "images/40-foundation_work.jpg",
-    "images/45-taking_measurements.jpg",
-    "images/50-lumber_package.jpg",
-    "images/55-floor_joists.jpg",
-    "images/1000-front_door_view.jpg"
+    {
+        "src": "images/01-empty_lot.jpg",
+        "caption": "the empty lot"
+    },
+    {
+        "src": "images/05-view_of_cows.jpg",
+        "caption": "gratuitous backyard cow shot"
+    },
+    {
+        "src": "images/10-muddy_location.jpg",
+        "caption": "our muddy lot is dug out in shape of house"
+    },
+    {
+        "src": "images/15-footers.jpg",
+        "caption": "the footers are poured"
+    },
+    {
+        "src": "images/20-we_have_blocks.jpg",
+        "caption": "foundation blocks are delivered"
+    },
+    {
+        "src": "images/25-work_begins.jpg",
+        "caption": "gravel and blocks"
+    },
+    {
+        "src": "images/30-more_blocks.jpg",
+        "caption": "more blocks"
+    },
+    {
+        "src": "images/35-foundation_begins.jpg",
+        "caption": "the foundation is started"
+    },
+    {
+        "src": "images/40-foundation_work.jpg",
+        "caption": "another view of the foundation"
+    },
+    {
+        "src": "images/45-taking_measurements.jpg",
+        "caption": "house looks small. verifying some measurements!"
+    },
+    {
+        "src": "images/50-lumber_package.jpg",
+        "caption": "lumber package is on site"
+    },
+    {
+        "src": "images/55-floor_joists.jpg",
+        "caption": "floor joists are started"
+    },
+    {
+        "src": "images/1000-front_door_view.jpg",
+        "caption": "eventual view from the front door"
+    }
 ]

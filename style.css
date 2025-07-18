@@ -45,6 +45,6 @@ body {
   text-shadow: 0 0 5px black;
 }
 
-.swiper-pagination-bullet-active {
+.swiper-pagination-bullet swiper-pagination-bullet-active {
   color: yellow !important;
 }

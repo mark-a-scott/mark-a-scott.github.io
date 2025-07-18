@@ -27,17 +27,12 @@
   <script>
     fetch('images.json')
       .then(res => res.json())
-      .then(images => {
+      .then(paths => {
         const wrapper = document.getElementById('swiper-wrapper');
-        images.forEach(image => {
+        paths.forEach(path => {
           const slide = document.createElement('div');
           slide.className = 'swiper-slide';
-          slide.innerHTML = `
-            <div class="slide-content">
-              <img src="${image.src}" alt="Slide Image" />
-              <div class="caption">${image.caption}</div>
-            </div>
-            `;
+          slide.innerHTML = `<img src="${path}" alt="Slide Image">`;
           wrapper.appendChild(slide);
         });
 
@@ -65,7 +60,7 @@
         });
       })
       .catch(err => {
-        document.body.innerHTML = '<p>Could not load images.</p>';
+        document.body.innerHTML = '<p style="color: white; text-align: center;">Could not load images.</p>';
         console.error(err);
       });
   </script>

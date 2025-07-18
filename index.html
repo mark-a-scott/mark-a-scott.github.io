@@ -27,12 +27,17 @@
   <script>
     fetch('images.json')
       .then(res => res.json())
-      .then(paths => {
+      .then(images => {
         const wrapper = document.getElementById('swiper-wrapper');
-        paths.forEach(path => {
+        images.forEach(image => {
           const slide = document.createElement('div');
           slide.className = 'swiper-slide';
-          slide.innerHTML = `<img src="${path}" alt="Slide Image">`;
+          slide.innerHTML = `
+            <div class="slide-content">
+              <img src="${image.src}" alt="Slide Image" />
+              <div class="caption">${image.caption}</div>
+            </div>
+            `;
           wrapper.appendChild(slide);
         });
 

@@ -16,6 +16,14 @@ body {
   background: #000;
 }
 
+.swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  max-height: 100vh;
+  max-width: 100vw;
+}
+
 .slide-content {
   position: relative;
   text-align: center;

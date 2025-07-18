@@ -46,5 +46,5 @@ body {
 }
 
 .swiper-pagination-bullet swiper-pagination-bullet-active {
-  color: yellow !important;
+  background: yellow !important;
 }
